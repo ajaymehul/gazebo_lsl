@@ -1,4 +1,4 @@
-# gazebo-lsl
+# gazebo_lsl
 
 This is a Gazebo plugin that allows models to stream data to Lab Streaming Layer.
 Tested on Ubuntu  18.04.3
