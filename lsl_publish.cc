@@ -83,6 +83,7 @@ namespace gazebo
     // Pointer to the update event connection
     private: event::ConnectionPtr updateConnection;
 
+    // Pointer to the LSL outlet
     public: lsl::stream_outlet* outlet;
   };
 
