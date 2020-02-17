@@ -16,11 +16,10 @@ namespace gazebo
   {
     public: LSLPublish() : ModelPlugin()
             {
-              printf("Hello World!\n");
             }
 
     public: void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
-    { printf("Hello World!\n");
+    { 
       // Store the pointer to the model
       this->model = _parent;
 
@@ -29,7 +28,7 @@ namespace gazebo
       try {
         //Make a new stream_info (100Hz)
         //info(name, type, channel_count, sample_rate, format, source_id)
-        lsl::stream_info info("Gazebo","Model",3,lsl::IRREGULAR_RATE,lsl::cf_float32, std::to_string(this->model->GetId()));
+        lsl::stream_info info("Gazebo","Position",3,lsl::IRREGULAR_RATE,lsl::cf_float32, std::to_string(this->model->GetId()));
         //Add description fields
         //Add units fields
         info.desc().append_child_value("Units", "Meters");
